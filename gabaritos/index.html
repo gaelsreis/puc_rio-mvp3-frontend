@@ -1,0 +1,104 @@
+<!DOCTYPE html />
+
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="https://www.puc-rio.br/imagens/puc_brasao_icone_browser.png">
+    <link rel="stylesheet" href="estilo.css" />
+    <script src="roteiro.js"></script>
+    <title>MVP-3 | Lista de Compras</title>
+</head>
+
+<body>
+    <main>
+        <header>
+            <p>Lista de Compras</p>
+        </header>
+
+        <section class="itens">
+            <!-- API clima tempo -->
+            <table>
+                <caption></caption>
+                <thead hidden>
+                    <tr>
+                        <th colspan="4">&nbsp;</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="tabCidade">
+                            <div class="city">Cidade Exemplo, BR</div>
+                            <div class="date">Terça, 1 Dezembro 2020</div>
+                        </td>
+                        <td id="tabTemp">
+                            <div class="container-temp mx-4 my-3">
+                                <div>22</div><span hidden></span>
+                            </div>
+                        </td>
+                        <td id="tabImg">
+                            <div class="container-img">
+                                <img src="./icons/unknown.png" alt="">
+                            </div>
+                        </td>
+                        <td id="tabDesc">
+                            <div class="weather py-2">Nublado</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <script src="roteiro-api.js"></script>
+        <script src="https://kit.fontawesome.com/f0e17cbf2f.js" crossorigin="anonymous"></script>
+        
+        <section class="itens">
+            <table>
+                <caption></caption>
+                <thead>
+                    <tr>
+                        <th id="tabTac">&nbsp;</th>
+                        <th id="tabNome">Item</th>
+                        <th id="tabQtde">Qtde</th>
+                        <th id="tabValor">Valor</th>
+                        <th id="tabAcao"><button type="button" id="excluirTudo" onclick="removeAll()"></button></th>
+                    </tr>
+                </thead>
+                <tbody id="minhaLista">
+                    <tr hidden>
+                        <td colspan="5">&nbsp;</th>
+                    </tr>
+                    <!-- Itens cadastrados -->
+                </tbody>
+            </table>
+        </section>
+
+        <section class="novoItem">
+            <table>
+                <caption></caption>
+                <thead hidden>
+                    <tr>
+                        <th colspan="5">&nbsp;</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="inserir">
+                        <!-- Formulário -->
+                        <td id="tabTacI">&nbsp;</td>
+                        <td id="tabNomeI"><input type="text" id="novoNome" placeholder="Produto" required /></td>
+                        <td id="tabQtdeI"><input type="number" id="novaQtde" placeholder="0" step="1" min="0" /></td>
+                        <td id="tabValorI"><input type="number" id="novoPreco" placeholder="0,00" step="0.01" min="0.0" size="12" maxlength="12" /></td>
+                        <td id="tabAcaoI"><button type="button" id="novo" onclick="novoItem()"></button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <footer>
+            <address>Gabriel dos Santos Reis | 🄯 2023</address>
+        </footer>
+    </main>
+
+</body>
+</html>

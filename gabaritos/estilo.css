@@ -1,0 +1,225 @@
+/* Página */
+
+html, body {
+    margin: 0;
+	padding: 0;
+    height: 100%;
+	width: 100%;
+    background: rgb(237, 237, 237);
+}
+
+body {
+    display: flex;
+	flex-direction: column;
+}
+
+
+/* Conteúdo */
+
+main {
+    flex-grow: 1;
+	width: 100%;
+}
+
+header, footer {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    text-align: center;
+}
+
+address {
+    color: gray;
+    font-size: 11px;
+}
+
+p {
+    color: #336600;
+    font-size: 28px;
+    font-family: Verdana;
+}
+
+
+/* Tabela */
+
+table {
+    overflow-x: auto;
+    margin: 5px;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 0;
+    width: 50%;
+    font-family: Helvetica;
+}
+
+tr {
+    box-sizing: border-box;
+}
+
+thead {
+    background-color: #336600;
+}
+
+tbody {
+    background-color: rgba(245, 245, 245, 0.912);
+}
+
+tbody tr:hover {
+    background-color: rgb(237, 237, 237);
+}
+
+th, td {
+    border-bottom: 0px solid rgb(237, 237, 237);
+}
+
+th {
+    height: 40px;
+    font-size: 16px;
+    color: white;
+}
+
+td {
+    height: 30px;
+    font-size: 14px;
+}
+
+
+/* Seção de itens e novo item */
+
+.itens, .novoItem {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Itens da lista */
+
+.tachado {
+    color: rgb(183, 181, 181);
+    text-decoration: line-through;
+}
+.naoTachado {
+    color: black;
+    text-decoration: none;
+}
+
+#minhaLista td {
+    text-align: center;
+}
+
+
+/* Células cabeçalho clima-tempo */
+
+#tabCidade {
+    width: 44%;
+    padding-left: 10;
+    color: gray;
+}
+
+#tabTemp, #tabImg {
+    width: 6%;
+    color: gray;
+}
+
+#tabDesc {
+    width: 44%;
+    padding-right: 10;
+    text-align: center;
+    color: gray;
+}
+
+
+/* Células cabeçalho e novo item */
+
+#tabNome, #tabNomeI {
+    width: 50%;
+}
+
+#tabQtde, #tabValor, #tabQtdeI, #tabValorI {
+    width: 15%;
+}
+
+#tabTac, #tabAcao, #tabTacI, #tabAcaoI {
+    width: 10%;
+    text-align: center;
+}
+
+
+/* Formulário novo item */
+
+#novoNome, #novaQtde, #novoPreco {
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+#inserir {
+    background-color: white;
+}
+
+#inserir:hover {
+    background-color: white;
+}
+
+
+/* Itens */
+
+input[type="checkbox"] + label {
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+    cursor: pointer;
+}
+
+
+input[type="text"], input[type="number"] {
+    outline: 0px solid gray;
+    border-radius: 5px;
+    background-color: transparent;
+    color: gray;
+    text-align: center;
+    font-family: Helvetica;
+    font-size: 14px;
+}
+
+input[type="text"]:hover, input[type="number"]:hover {
+    background-color: white;
+    color: black;
+}
+
+input[type="text"]:hover::placeholder, input[type="number"]:hover::placeholder {
+    color: transparent;
+}
+
+/* Botões incluir e excluir */
+button {
+    margin: 0px;
+    border: none;
+    border-radius: 3px;
+    padding: 12px;
+    cursor:pointer;
+    filter: opacity(100%);
+  }
+
+button:hover, button:focus {
+    filter: opacity(100%);
+  }
+
+#excluir, #excluirTudo {
+    background: url("img/menos32.png") center no-repeat;
+  }
+
+#excluir:hover, #excluirTudo:hover {
+    background: #ff3300 url("img/menos32.png") center no-repeat;
+  }
+
+#novo {
+    background: url("img/mais32.png") center no-repeat;
+  }
+
+#novo:hover {
+    background: #33cc00 url("img/mais32.png") center no-repeat;
+  }
